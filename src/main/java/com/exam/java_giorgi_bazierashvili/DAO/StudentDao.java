@@ -1,6 +1,6 @@
-package com.exam.java_giorgi_bazierashvili.DAO;
+package com.exam.assignment.DAO;
 
-import com.exam.java_giorgi_bazierashvili.bean.Student;
+import com.exam.assignment.bean.Student;
 
 import java.sql.*;
 import java.util.ArrayList;

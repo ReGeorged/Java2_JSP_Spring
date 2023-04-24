@@ -1,4 +1,4 @@
-package com.exam.java_giorgi_bazierashvili.bean;
+package com.exam.assignment.bean;
 
 
 import lombok.Getter;

@@ -1,1 +1,0 @@
-INSERT INTO exams.Students (FirstName,LastName,Major,Address,City) values(?,?,?,?,?);

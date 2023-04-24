@@ -1,16 +1,16 @@
-package com.exam.java_giorgi_bazierashvili;
+package com.exam.assignment;
 
 import java.io.*;
 import java.util.List;
 
-import com.exam.java_giorgi_bazierashvili.bean.Student;
-import com.exam.java_giorgi_bazierashvili.DAO.StudentDao;
+import com.exam.assignment.bean.Student;
+import com.exam.assignment.DAO.StudentDao;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
-import static com.exam.java_giorgi_bazierashvili.DAO.StudentDao.insertNewStudent;
+import static com.exam.assignment.DAO.StudentDao.insertNewStudent;
 
 @WebServlet(name = "studentManagement", value = "/")
 public class StudentServlet extends HttpServlet {
