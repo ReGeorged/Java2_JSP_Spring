@@ -1,16 +1,13 @@
-package com.exam.java_giorgi_bazierashvili.database;
+package com.exam.java_giorgi_bazierashvili.DAO;
 
-import com.exam.java_giorgi_bazierashvili.DAO.Student;
+import com.exam.java_giorgi_bazierashvili.bean.Student;
 
-import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class MySqlConnection {
+public class StudentDao {
     public static Connection createMysqlConnection() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -19,9 +16,7 @@ public class MySqlConnection {
         }
         Connection con = null;
         try {
-            con = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/exams?useSSL=false", "root", "root")
-            ;
+            con = DriverManager.getConnection("jdbc:mysql://localhost:3306/exams?useSSL=false", "root", "root");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -45,7 +40,7 @@ public class MySqlConnection {
             preparedStatement.setString(5, student.getCity());
             preparedStatement.executeUpdate();
 
-            createMysqlConnection().close();
+            myConnection.close();
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -74,13 +69,12 @@ public class MySqlConnection {
 
             }
             return studentList;
-        }
-             catch (SQLException e) {
+        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
 
 
-    }
+}
 
 

@@ -1,4 +1,4 @@
-package com.exam.java_giorgi_bazierashvili.DAO;
+package com.exam.java_giorgi_bazierashvili.bean;
 
 
 import lombok.Getter;
@@ -25,14 +25,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return "Student{" +
-                "id=" + id +
-                ", FirstName='" + FirstName + '\'' +
-                ", LastName='" + LastName + '\'' +
-                ", Major='" + Major + '\'' +
-                ", Address='" + Address + '\'' +
-                ", City='" + City + '\'' +
-                '}';
+        return "id=" + id + ", FirstName='" + FirstName + '\'' + ", LastName='" + LastName + '\'' + ", Major='" + Major + '\'' + ", Address='" + Address + '\'' + ", City='" + City + '\'';
     }
 
     private String Major;
